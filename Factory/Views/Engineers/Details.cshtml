@@ -1,0 +1,39 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h2>Fancy employee details</h2>
+
+<hr />
+
+<h3>@Html.DisplayFor(model => model.Name)</h3>
+
+
+@if(@Model.JoinEntities.Count == 0)
+{
+  <p>this fancy engineer does not have any machines assigned to them</p>
+}
+else
+{
+  <h4>fancy machines this fancy engineer is qualified to repair:</h4>
+  <ul>
+    @foreach(var join in Model.JoinEntities)
+    {
+      <li>@join.Machine.MachineName </li> 
+      @using (Html.BeginForm("DeleteMachine", "Engineers"))
+      {
+        @Html.Hidden("joinId", @join.EngineerMachineId)
+        <input type="submit" value="remove" />
+      }
+    }
+  </ul>
+}
+
+<ul class="menu-links">
+  <li>@Html.ActionLink("edit engineer", "Edit", new { id = Model.EngineerId })</li>
+  <li>@Html.ActionLink("delete engineer", "Delete", new { id = Model.EngineerId })</li>
+  <li>@Html.ActionLink("assign to a machine", "AddMachine", new {id = Model.EngineerId })</li>
+  <li>@Html.ActionLink("back to employee directory", "Index")</li>
+</ul>
