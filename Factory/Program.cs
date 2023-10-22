@@ -3,9 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Factory.Models;
 
+
 namespace Factory
 {
-  class Program
+ class Program
   {
     static void Main(string[] args)
     {
@@ -32,8 +33,7 @@ namespace Factory
 
       app.MapControllerRoute(
           name: "default",
-          pattern: "{controller=Home}/{action=Index}/{id?}"
-        );
+          pattern: "{controller=Home}/{action=Index}/{id?}");
 
       app.Run();
     }
