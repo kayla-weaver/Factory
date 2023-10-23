@@ -4,27 +4,30 @@
 
 @using Factory.Models
 
-<h1 class="title">The Factory</h1>
+<h1 class="title">The Fancy Factory</h1>
 
 
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <h3>Engineers</h3>
+      <h3>Fancy Engineers</h3>
       @if (@ViewBag.EmployeeDirectory.Count == 0)
       {
-        <h4>we have not hired any Engineers members yet</h4>
+        <h4>we have not hired any fancy Engineers members yet</h4>
       }
       @foreach(Engineer engineer in @ViewBag.EmployeeDirectory)
       {
         <li>@engineer.Name</li>
       }
     </div>
+    </div>
+    <div class="container">
     <div class="col-md-6">
-      <h3>Machines</h3>
+    
+      <h3>Fancy Machines</h3>
       @if (@ViewBag.MachineInventory.Count == 0)
       {
-        <h4>we have no functioning machines currently</h4>
+        <h4>we have no functioning machines currently -not very fancy</h4>
       }
       @foreach(Machine machine in @ViewBag.MachineInventory)
       {
