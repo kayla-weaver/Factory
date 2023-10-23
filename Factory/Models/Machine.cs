@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Microsoft.Identity.Client;
+using System;
 
 namespace Factory.Models
 {
