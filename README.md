@@ -47,7 +47,7 @@ This applications allows the user to see and see Machines, Engineers, and the wa
 - Make sure you save all changes you've made to the file
 
 ## **Known Bugs**
-need to work on functional header and styling
+no known bugs :)
 
   MIT License 
   Copyright (c) [2023] [Kayla Weaver]
